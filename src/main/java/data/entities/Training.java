@@ -34,7 +34,7 @@ public class Training {
 	private Calendar startTime;
 	private Calendar endTime;
 	
-	public final int MAX_PLAYERS = 2;
+	public final int MAX_PLAYERS = 4;
 	
 	public Training(List<User> players,Court court, User coach,Calendar startTime, Calendar endTime){
 		this.players = players;
