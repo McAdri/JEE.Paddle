@@ -44,6 +44,14 @@ public class Training {
 		this.endTime = endTime;
 	}
 
+	public Training(Calendar startTime2, Calendar endTime2, Court court2, User coach2) {
+		// TODO Auto-generated constructor stub
+		this.court = court2;
+		this.coach = coach2;
+		this.startTime = startTime2;
+		this.endTime = endTime2;
+	}
+
 	public int getId() {
 		return id;
 	}

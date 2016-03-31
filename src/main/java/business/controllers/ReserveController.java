@@ -78,9 +78,18 @@ public class ReserveController {
         reserveDao.save(reserve);
         return true;
     }
+    
+    public void notBusyCourt(int courtId, Calendar date, String trainerUsername) {
+		Reserve reserve = reserveDao.findByCourtAndDate(courtDao.findOne(courtId), date);
+		reserveDao.delete(reserve);
+	}
 
     public boolean rightTime(int hour) {
         return hour >= START_TIME && hour <= END_TIME;
+    }
+    
+    public boolean isAvailable(int courtId, Calendar date) {
+    	return (reserveDao.findByCourtAndDate(courtDao.findOne(courtId), date) == null);
     }
 
 }
