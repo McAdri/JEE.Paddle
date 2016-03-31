@@ -11,6 +11,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
+import org.hibernate.loader.custom.Return;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 @Entity
@@ -109,5 +110,19 @@ public class Training {
 	public String toString() {
 		return "Training [id=" + id + ", players=" + players + ", coach=" + coach + ", court=" + court
 				+ ", startTime=" + startTime + ", endTime=" + endTime + "]";
+	}
+	
+	public void removePlayer(User player){
+		players.remove(player);
+	}
+	
+	public boolean addPlayer(User player){
+		if(players.size() < MAX_PLAYERS){
+			players.add(player);
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }
