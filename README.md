@@ -30,3 +30,11 @@
 
 ###### Autor: Jesús Bernal Bermúdez U.P.M.
 
+
+###### Puntos realizados
+ECP1. Persistencia
+ A B C
+
+ECP1. Api
+ A B C
+
