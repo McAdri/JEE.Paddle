@@ -61,4 +61,9 @@ public class UserWrapper {
         return "UserWrapper [username=" + username + ", email=" + email + ", password=" + password + ", birthDate=" + time + "]";
     }
 
+	public String getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
